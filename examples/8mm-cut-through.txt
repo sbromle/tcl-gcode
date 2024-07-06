@@ -1,0 +1,280 @@
+G21 ; Set units to millimeters
+G90 ; Set to absolute positioning
+G17 ; Select XY plane
+G94 ; Set feed rate mode to units per minute
+
+; Initial position above workpiece
+G0 Z5 ; Move to a safe height above the workpiece
+G0 X-3.825 Y0 ; Move to the starting position (4mm radius from center)
+
+M4 S3000 ; Start spindle clockwise (adjust spindle speed as necessary)
+G4 P1000
+M4 S0 ; Start spindle clockwise (adjust spindle speed as necessary)
+G4 P1000
+
+M4 S6000 
+G4 P1000
+M4 S10000 
+G4 P1000
+
+; Loop through 0.2mm depth increments until 7.2mm depth is reached
+G1 Z-0.2 F40 ; Move to depth 0.2mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+ 
+G1 Z-0.4 F40 ; Move to depth 0.4mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-0.6 F40 ; Move to depth 0.6mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+; Repeat for each depth increment
+G1 Z-0.8 F40 ; Move to depth 0.8mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-1.0 F40 ; Move to depth 1.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+; Continue repeating until 7mm depth
+; Add additional steps as needed until the final depth of 7.0mm
+G1 Z-1.2 F40 ; Move to depth 1.2mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-1.4 F40 ; Move to depth 1.4mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-1.6 F40 ; Move to depth 1.6mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-1.8 F40 ; Move to depth 1.8mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-2.0 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-2.2 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-2.4 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-2.6 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-2.8 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-3.0 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-3.2 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-3.4 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-3.6 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-3.8 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-4.0 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-4.2 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-4.4 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-4.6 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-4.8 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-5.0 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-5.2 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-5.4 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-5.6 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-5.8 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-6.0 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-6.2 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-6.4 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-6.6 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-6.8 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-7.0 F40 ; Move to depth 2.0mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+G1 Z-7.2 F40 ; Move to depth mm
+G2 X0 Y3.825 I3.825 J0 F10 ; Clockwise arc, first quadrant
+X3.825 Y0 I0 J-3.825 ; Second quadrant
+X0 Y-3.825 I-3.825 J0 ; Third quadrant
+X-3.825 Y0 I0 J3.825 ; Fourth quadrant
+G0 Z5 ; Rapid move to safe height
+
+
+M5 ; Stop spindle
+G0 Z5 ; Move to safe height
+G0 X0 Y0 ; Return to origin
+M30 ; End program
