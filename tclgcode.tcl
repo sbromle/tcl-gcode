@@ -94,12 +94,12 @@ proc dwell {floatseconds} {
 	set seconds [expr {int($floatseconds)}];
 	set ms [expr {int(1000*($floatseconds-$seconds))}];
 	if {$ms>0} {
-		lappend "P${ms}";
+		puts "G4 P$ms ; dwell for $ms milliseconds";
 	}
-	if {$seconds>0} {
-		lappend cmd "S${seconds}";
+	while {$seconds>=1} {
+		# Done this way because GRBL doesn't seem to like using "G4 S1" for example;
+		puts "G4 P1000 ; dwell for 1 second";
 	}
-	puts "G4 [join $cmd " "] ; dwell for $floatseconds seconds";
 }
 
 # Speed is in units of whatever "CUTTER_POWER_UNIT" was set to;
