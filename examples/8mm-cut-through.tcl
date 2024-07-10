@@ -12,6 +12,7 @@ set_arc_tolerance_mm 0.2; # 0.2 mm arc tolerance.
 rapid_linear_move Z 5; # Move to a safe height above the workpiece
 rapid_linear_move X -3.825 Y 0; # Move to the starting position (4mm radius from center)
 
+spindle_on; # turn on the spindle;
 spindle_clockwise 3000; # Start spindle clockwise (adjust spindle speed as necessary                                          
 dwell 1;
 spindle_clockwise 6000; 
