@@ -110,6 +110,10 @@ proc spindle_clockwise {speed} {
 	puts "M4 S[string trim $speed]";
 }
 
+proc spindle_on {} {
+	puts "M4 0 ; start the spindle";
+}
+
 proc spindle_off {} {
 	puts "M5 ; stop the spindle";
 }
